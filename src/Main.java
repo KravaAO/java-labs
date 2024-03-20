@@ -1,27 +1,6 @@
 package src;
 
-import java.time.Instant;
-
-class Car {
-    String carNumber;
-    String driverName;
-    Instant parkingTime;
-
-    public Car(String carNumber, String driverName) {
-        this.carNumber = carNumber;
-        this.driverName = driverName;
-        this.parkingTime = Instant.now();
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "carNumber='" + carNumber + '\'' +
-                ", driverName='" + driverName + '\'' +
-                ", parkingTime=" + parkingTime +
-                '}';
-    }
-}
+import src.car.Car;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,7 +29,7 @@ public class Main {
             }
         }
 
-        System.out.println("After removing the car:");
+        System.out.println("After removing the src.car:");
         for (Car car : cars) {
             if (car != null)
                 System.out.println(car);
